@@ -1,6 +1,5 @@
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
@@ -9,34 +8,19 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
+import PrintablesIcon from '../components/Icon/PrintablesIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
-  SkillGroup,
   Social,
-  TestimonialSection,
   TimelineItem,
 } from './dataDef';
 
@@ -44,8 +28,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Rick Rocklin - Resume',
+  description: "Rick Rocklin - Resume",
 };
 
 /**
@@ -55,11 +39,7 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
   Resume: 'resume',
-  Skills: 'skills',
-  Stats: 'stats',
-  Testimonials: 'testimonials',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -69,28 +49,23 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Rick Rocklin.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a United States based <strong className="text-stone-100">Lead Infrastructure Engineer</strong>, currently working
+        at <strong className="text-stone-100">Wells Fargo & Company</strong> helping build a modern, end-user focused,
+		    distributed infrastructure leveraging both public and private cloud.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me hanging out with my <strong className="text-stone-100">wonderful wife and children</strong>,
+        find me working on a <strong className="text-stone-100">home automation</strong> project,
+		<strong className="text-stone-100"> 3D printing </strong>something, or exploring beautiful{' '}
+        <strong className="text-stone-100">Arizona</strong> with my family.
       </p>
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -104,259 +79,157 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `A lead information technology associate specializing in x86 Virtualization (VMware), Cloud infrastructure and 
+	Systems Analysis with progressively increasing responsibilities.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Phoenix, Arizona', Icon: MapIcon},
+    {label: 'Age', text: '40s', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'American', Icon: FlagIcon},
+    {label: 'Interests', text: 'Home Automation, 3D Printing, Cars', Icon: SparklesIcon},
+    {label: 'Study', text: 'DeVry University', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Wells Fargo & Co', Icon: BuildingOffice2Icon},
   ],
 };
-
-/**
- * Skills section
- */
-export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
-];
-
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
-];
 
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'February 2005',
+    location: 'DeVry University',
+    title: 'Bachelor of Science in Networking and Communication Management',
+    content: <p>School was an excellent place to expand my skills, and also meet some lifelong friends who I still work with today.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'September 2021 - Present',
+    location: 'Wells Fargo & Co',
+    title: 'Lead Infrastructure Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Design and test operating GitOps framework, Architecture and engineering activities related to End User Computing Platform, 
+        Consult at the highest technical level with clients and IT management related to design, planning, integration, implementation, 
+        scalability, problem definitions and resolution of End User Compute platforms, Design and deliver fully automated solutions using 
+        Ansible and other tools.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'July 2020 - September 2021 (1 yr 3 mos)',
+    location: 'Wells Fargo & Co (CTO)',
+    title: 'Software Senior Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Supporting and maintaining PaaS. Primarily responsible for the design, build, and support of Cloud Foundry and Kubernetes. 
+        Consult at the highest technical level with clients and IT management related to design, planning, integration, implementation, 
+        scalability, problem definitions and resolution of PaaS hosted applications. Responsible for building PaaS environments, developing 
+        and maintaining automation scripts, patching, and performance for the overall health of all PaaS environment. Testing product enhancements, 
+        and upgrading platforms.
+      </p>
+    ),
+  },
+  {
+    date: 'July 2018 - July 2020 (2 yrs 1 mo)',
+    location: 'Wells Fargo & Co',
+    title: 'Operating Systems Engineer (Team Lead)',
+    content: (
+      <p>
+        Supporting and maintaining IaaS. Primarily responsible for the design and engineering related to the VMware vRealize Suite products. 
+        Consult at the highest technical level with 3rd parties and IT management related to design, planning, integration, implementation, 
+        scalability, problem definitions, and resolution of IaaS platform. Testing product enhancements, and upgrading platforms.
+      </p>
+    ),
+  },
+  {
+    date: 'January 2008 - July 2018 (10 yrs 7 mos)',
+    location: 'Wells Fargo & Co',
+    title: 'Virtualization Engineer',
+    content: (
+      <p>
+        Primary responsibilities include engineering tasks related to the enterprise x86 VMware offering at Wells Fargo. Including but not
+        limited to proof of concepts, engineering and defining new process, automation, documentation and training, escalation point for 
+        support analysts, certification and deployments of new services including all product lines from VMware and other vendors, design 
+        and design reviews.
+      </p>
+    ),
+  },
+  {
+    date: 'September 2007 - January 2008 (5 mos)',
+    location: 'Wells Fargo & Co',
+    title: 'Web Engineer',
+    content: (
+      <p>
+		Provide top-to-bottom hosting services for over 50 significant internal customers.  Collaborate with internal groups to realize 
+		and implement robust but cost-effective solutions meeting business objectives.  Manage 150+ remote Windows and Linux physical and 
+		virtual servers supporting dozens of custom N-tier applications using tailored industry-standard platforms and architectures such 
+		as .NET, MS-SQL, MSCS, Apache, Tomcat, etc.
+      </p>
+    ),
+  },
+  {
+    date: 'July 2006 - September 2007 (1 yr 3 mos)',
+    location: 'ProNet Solutions',
+    title: 'Emergency Response Team Engineer',
+    content: (
+      <p>
+		Primarily responsible for delivering an immediate response on high priority troubles to clients and employees by performing both 
+		support activities and analysis for new and existing clients within the financial services sector. Domain administrator for 80+ multi 
+		branch community banks. Providing remote desktop and network support, providing on-site desktop and network support. Deliver both a 
+		responsive and enjoyable experience to customers, while providing remote LAN/WAN management and engineering services in a team environment. 
+		This includes but not limited to improving the efficiency and effectiveness of customers by proactively auditing and supporting their PC 
+		and networking needs. Internal training. Working in a team with Network Administrators, Network Engineers, Project Managers, Relationship 
+		Managers & Security Professionals in a single point of contact environment.
+      </p>
+    ),
+  },
+  {
+    date: 'May 2005 - July 2006 (1 yr 3 mos)',
+    location: 'ProNet Solutions',
+    title: 'Technical Support Consultant',
+    content: (
+      <p>
+		Duties include phone/remote support in a Single Point of Contact environment. Network Administration for 30+ financial institutions. 
+		Troubleshooting desktop/server environments. Multi-tasking.
+      </p>
+    ),
+  },
+  {
+    date: 'May 2004 - April 2005 (1 yr)',
+    location: 'TeleSpectra LLC',
+    title: 'Network Analyst',
+    content: (
+      <p>
+		Duties include phone/remote support in a Single Point of Contact environment. Network Administration for 30+ financial institutions. 
+		Troubleshooting desktop/server environments. Multi-tasking.
       </p>
     ),
   },
 ];
 
 /**
- * Testimonial section
- */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
-
-/**
  * Contact section
  */
-
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Drop me a line and I will get back to you as soon as possible.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'me@rickrocklin.com',
+      href: 'mailto:me@rickrocklin.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'Phoenix, Arizona',
+      href: 'https://www.google.com/maps/place/Phoenix,+AZ',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'ntalekt',
+      href: 'https://github.com/ntalekt',
     },
   ],
 };
@@ -365,9 +238,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/ntalekt'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/rickrocklin/'},
+  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/1883031/ntalekt'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/ricksface'},
+  {label: 'Printables', Icon: PrintablesIcon, href: 'https://www.printables.com/@ntalekt_371042'},
 ];
