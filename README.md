@@ -1,5 +1,7 @@
 # Rick's Resume React Website
 
+Using Tim Baker's react template: https://github.com/tbakerx/react-resume-template
+
 ### View a [live demo here.](https://resume.rickrocklin.com)
 
 ### Make sure you have what you need
@@ -21,7 +23,7 @@ npx eslint . --fix
 yarn build
 docker build . -t resume
 docker tag ntalekt/resume:latest ntalekt/resume:old
-docker tag resume ntalekt/resume
+docker tag resume:latest ntalekt/resume:latest
 docker login
 docker push ntalekt/resume:old
 docker push ntalekt/resume:latest
