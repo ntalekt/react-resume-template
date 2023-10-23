@@ -29,7 +29,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Rick Rocklin - Resume',
-  description: "Rick Rocklin - Resume",
+  description: "Rick is a technical professional with enterprise infrastructure experience.",
 };
 
 /**
