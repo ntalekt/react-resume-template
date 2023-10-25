@@ -68,6 +68,12 @@ export const heroData: Hero = {
   ),
   actions: [
     {
+      href: '/assets/resume.pdf',
+      text: 'Resume',
+      primary: true,
+      Icon: ArrowDownTrayIcon,
+    },
+    {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
       primary: false,
@@ -239,8 +245,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/ntalekt'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/rickrocklin/'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/ntalekt'},
   {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/1883031/ntalekt'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/ricksface'},
   {label: 'Printables', Icon: PrintablesIcon, href: 'https://www.printables.com/@ntalekt_371042'},
