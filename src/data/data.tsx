@@ -114,10 +114,10 @@ export const experience: TimelineItem[] = [
   {
     date: 'September 2021 - Present',
     location: 'Wells Fargo & Co',
-    title: 'Lead Infrastructure Engineer',
+    title: 'VP, Lead Infrastructure Engineer (EUC)',
     content: (
       <p>
-        Design and test operating GitOps framework, Architecture and engineering activities related to End User Computing Platform, 
+        Team lead. Design and test operating GitOps framework, Architecture and engineering activities related to End User Computing Platform, 
         Consult at the highest technical level with clients and IT management related to design, planning, integration, implementation, 
         scalability, problem definitions and resolution of End User Compute platforms, Design and deliver fully automated solutions using 
         Ansible and other tools.
@@ -126,11 +126,11 @@ export const experience: TimelineItem[] = [
   },
   {
     date: 'July 2020 - September 2021 (1 yr 3 mos)',
-    location: 'Wells Fargo & Co (CTO)',
-    title: 'Software Senior Engineer',
+    location: 'Wells Fargo & Co',
+    title: 'VP, CTO - Cloud Platform Engineer (PaaS)',
     content: (
       <p>
-        Supporting and maintaining PaaS. Primarily responsible for the design, build, and support of Cloud Foundry and Kubernetes. 
+        CTO sponsored PaaS initiative. Supporting and maintaining PaaS. Primarily responsible for the design, build, and support of Cloud Foundry and Kubernetes. 
         Consult at the highest technical level with clients and IT management related to design, planning, integration, implementation, 
         scalability, problem definitions and resolution of PaaS hosted applications. Responsible for building PaaS environments, developing 
         and maintaining automation scripts, patching, and performance for the overall health of all PaaS environment. Testing product enhancements, 
@@ -141,10 +141,10 @@ export const experience: TimelineItem[] = [
   {
     date: 'July 2018 - July 2020 (2 yrs 1 mo)',
     location: 'Wells Fargo & Co',
-    title: 'Operating Systems Engineer (Team Lead)',
+    title: 'VP, Cloud Platform Engineer (IaaS)',
     content: (
       <p>
-        Supporting and maintaining IaaS. Primarily responsible for the design and engineering related to the VMware vRealize Suite products. 
+        Team lead. Supporting and maintaining IaaS. Primarily responsible for the design and engineering related to the VMware vRealize Suite products. 
         Consult at the highest technical level with 3rd parties and IT management related to design, planning, integration, implementation, 
         scalability, problem definitions, and resolution of IaaS platform. Testing product enhancements, and upgrading platforms.
       </p>
@@ -182,7 +182,7 @@ export const experience: TimelineItem[] = [
     title: 'Emergency Response Team Engineer',
     content: (
       <p>
-		Primarily responsible for delivering an immediate response on high priority troubles to clients and employees by performing both 
+		Team lead. Primarily responsible for delivering an immediate response on high priority troubles to clients and employees by performing both 
 		support activities and analysis for new and existing clients within the financial services sector. Domain administrator for 80+ multi 
 		branch community banks. Providing remote desktop and network support, providing on-site desktop and network support. Deliver both a 
 		responsive and enjoyable experience to customers, while providing remote LAN/WAN management and engineering services in a team environment. 
